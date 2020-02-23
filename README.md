@@ -18,7 +18,7 @@ www.google.com
 ![](1.png)
 ### 4、测试
 拿 CNVD-2020-10487-Tomcat-Ajp-lfi.py测试即可
-`python CNVD-2020-10487-Tomcat-Ajp-lfi.p target.com`
+`python CNVD-2020-10487-Tomcat-Ajp-lfi.py target.com`
 ## 本项目仅供学习，严禁用于非法操作
 ps1:两个脚本的最后一行均为线程数-默认是20，可自行修改      
 位于threading-find-port-8009.py 67行              
@@ -27,6 +27,13 @@ threading-CNVD-2020-10487-Tomcat-Ajp-lfi.py 341行
 ```
 thread_num=20
 ```
+若是python3运行环境，运行时会报错，报错代码为： 
+```
+File ".\threading-find-port-8009.py", line 9, in <module>
+    import Queue
+ModuleNotFoundError: No module named 'Queue'
+```
 
+解决方案：修改源代码中的"Queue"为"queue"保存文件运行即可。
 
 ps2:src域名收集文件夹中为本人收集的教育src和补天src的一些域名，可直接测试
